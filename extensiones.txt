@@ -1,0 +1,8 @@
+jakethashi.vscode-angular2-emmet
+danwahlin.angular2-snippets
+mikael.angular-beastcode
+angular.ng-template
+natewallace.angular2-inline
+steoates.autoimport
+hookyqr.beautify
+thekalinga.bootstrap4-vscode
