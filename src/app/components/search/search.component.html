@@ -1,0 +1,13 @@
+<h1 class="animated fadeIn fast">Resultados para <small>{{text}}</small></h1>
+
+<div class="row mt-2 fadeIn slow" *ngIf="heroes.length==0">
+    <div class="col-12">
+        <div class="alert alert-primary" role="alert">
+            <strong>No existen resultados para "{{text}}"</strong>
+        </div>
+    </div>
+</div>
+
+<div class="card-columns animated fadeIn fast">
+    <app-heroe-tarjeta [heroe]="heroe" *ngFor="let heroe of heroes; let i=index"></app-heroe-tarjeta>
+</div>

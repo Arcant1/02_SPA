@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+        <img src="assets/img/favicon.ico" height=30px alt="">
+    </a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item" routerlinkActive="active">
+                <a class="nav-link " [routerLink]="['home']">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" routerlinkActive="active">
+                <a class="nav-link" [routerLink]="['heroes']">Heroes</a>
+            </li>
+            <li class="nav-item" routerlinkActive="active">
+                <a class="nav-link" [routerLink]="['about']">About</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Usuario</a>
+                <div class="dropdown-menu alert-dark" aria-labelledby="dropdownId">
+                    <a class="dropdown-item alert-primary" [routerLink]="['home']">Cambiar de usuario</a>
+                    <a class="dropdown-item alert-danger" [routerLink]="['home']">Cerrar sesión</a>
+                </div>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Buscar Héroe" (keyup)="buscarHeroe(buscarTexto.value)" (blur)="buscarHeroe(buscarTexto.value); buscarTexto.value=''" #buscarTexto>
+            <button class="btn btn-outline-primary my-2 my-sm-0" (click)="buscarHeroe(buscarTexto.value)" type="button">Buscar</button>
+        </form>
+    </div>
+</nav>
