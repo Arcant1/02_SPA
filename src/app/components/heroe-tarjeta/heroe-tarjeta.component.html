@@ -5,10 +5,5 @@
         <p class="card-text">{{heroe.bio}}</p>
         <p class="card-text"><small class="text-muted">Primera aparición: {{ heroe.aparicion }}</small></p>
     </div>
-    <!--<button class="btn btn-outline-primary btn-block">Ver más ...</button>-->
-    <button (click)="verHeroe(heroe.id)" type="button" class="btn btn-outline-primary btn-block"> Ver más...</button>
-
-    <!--
-  <a [routerLink]="['heroe',i]" class="btn btn-block btn-outline-primary">Ver más ..</a>
--->
+    <button (click)="verHeroe()" type="button" class="btn btn-outline-primary btn-block"> Ver más...</button>
 </div>

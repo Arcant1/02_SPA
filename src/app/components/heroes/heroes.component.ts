@@ -11,7 +11,7 @@ import { RouterModule} from '@angular/router';
 export class HeroesComponent implements OnInit {
 
 // tslint:disable-next-line: variable-name
-  constructor( private _heroesService: HeroesService, private router: Router ) {
+  constructor( private _heroesService: HeroesService, private _router: Router ) {
 
    }
 
@@ -21,8 +21,5 @@ export class HeroesComponent implements OnInit {
     this.heroes = this._heroesService.getHeroes();
   }
 
-  verHeroe(i: number) {
-    this.router.navigate(['/heroes/heroe', i]);
-  }
 
 }
